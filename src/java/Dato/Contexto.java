@@ -23,12 +23,12 @@ public class Contexto
         this.link = link;
     }
 
-    public int getId_Squema()
+    public int getIdContexto()
     {
         return idContexto;
     }
 
-    public void setId_Squema(int idContexto)
+    public void setIdContexto(int idContexto)
     {
         this.idContexto = idContexto;
     }
@@ -55,6 +55,6 @@ public class Contexto
 
     public String ImplimirSquema()
     {
-        return "Squema{\n" + "id_Squema=" + idContexto + ", Nombre=" + link + "\n  listaTablas=" + listaTablas + "}\n\n";
+        return "Contexto{\n" + "idContexto=" + idContexto + ", Link=" + link + "\n  listaTablas=" + listaTablas + "}\n\n";
     }
 }
