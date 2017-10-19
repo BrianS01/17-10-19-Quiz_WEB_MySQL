@@ -2,7 +2,7 @@ drop database if exists BasesQuizEsquema;
 create database BasesQuizEsquema;
 use BasesQuizEsquema;
 
-CREATE TABLE EsqBaseD.`Squemas`
+CREATE TABLE BasesQuizEsquema.`Squemas`
 (
 	`Squemaid` int(11) NOT NULL AUTO_INCREMENT,
 	`firstname` varchar(45) DEFAULT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE EsqBaseD.`Squemas`
 );
 
 
-CREATE TABLE EsqBaseD.`tabla`
+CREATE TABLE BasesQuizEsquema.`tabla`
 (
 	`tablaid` int(11) NOT NULL AUTO_INCREMENT,
 	`esquemaid` int(11) NOT null,
@@ -20,7 +20,7 @@ CREATE TABLE EsqBaseD.`tabla`
 );
 
 
-CREATE TABLE EsqBaseD.`columnas`
+CREATE TABLE BasesQuizEsquema.`columnas`
 (
 	`columnaid` int(11) NOT NULL AUTO_INCREMENT,
 	`tablaid1` int(11) NOT null,
@@ -30,7 +30,7 @@ CREATE TABLE EsqBaseD.`columnas`
 );
 
 
-CREATE TABLE EsqBaseD.`FOREIGN KEY`
+CREATE TABLE BasesQuizEsquema.`FOREIGN KEY`
 (
 	`forgeinid` int(11) NOT NULL AUTO_INCREMENT,
     `firstname` varchar(45) DEFAULT NULL,
@@ -38,14 +38,14 @@ CREATE TABLE EsqBaseD.`FOREIGN KEY`
 );
 
 
-create table EsqBaseD.`unidad`
+create table BasesQuizEsquema.`unidad`
 (
 	`idUnidad` int(11) NOT NULL AUTO_INCREMENT,
     primary key(`id`)
 );
 
 
-create table EsqBaseD.`contexto`
+create table BasesQuizEsquema.`contexto`
 (
 	`idContexto` int(11) NOT NULL AUTO_INCREMENT,
     `idUnidad` int(11) NOT NULL,
@@ -54,7 +54,7 @@ create table EsqBaseD.`contexto`
 );
 
 
-create table EsqBaseD.`modelo`
+create table BasesQuizEsquema.`modelo`
 (
 	`idModelo` int(11) NOT NULL AUTO_INCREMENT,
     `idUnidad` int(11) NOT NULL,
