@@ -10,9 +10,10 @@ package Dato;
  * @author Mario-Bx
  */
 public class Columna {
+
     private int id_Colimna;
-    private String Nombre; 
-    private String tipoDato; 
+    private String Nombre;
+    private String tipoDato;
 
     public Columna() {
     }
@@ -51,6 +52,4 @@ public class Columna {
     public String toString() {
         return "Columna{" + "id_Colimna=" + id_Colimna + ", Nombre=" + Nombre + ", tipoDato=" + tipoDato + "}";
     }
-
-    
 }

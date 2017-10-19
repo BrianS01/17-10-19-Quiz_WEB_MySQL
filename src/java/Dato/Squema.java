@@ -12,9 +12,9 @@ import java.util.*;
  * @author Mario-Bx
  */
 public class Squema {
-    
+
     private int id_Squema;
-    private String Nombre; 
+    private String Nombre;
     ArrayList<Tabla> listaTablas = new ArrayList<Tabla>();
 
     public Squema() {
@@ -50,13 +50,8 @@ public class Squema {
     }
 
     public String ImplimirSquema() {
-        return "Squema{\n" + "id_Squema=" + id_Squema + ", Nombre=" + Nombre 
+        return "Squema{\n" + "id_Squema=" + id_Squema + ", Nombre=" + Nombre
                 + "\n  listaTablas=" + listaTablas + "}\n\n";
     }
-    
-    
-    
-    
-    
-   
+
 }

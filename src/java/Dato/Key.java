@@ -9,13 +9,14 @@ package Dato;
  *
  * @author Mario-Bx
  */
-public class Key extends Columna{
-
-    public Key() {
+public class Key extends Columna
+{
+    public Key()
+    {
     }
 
-    public Key(int id_Colimna, String Nombre, String tipoDato) {
+    public Key(int id_Colimna, String Nombre, String tipoDato)
+    {
         super(id_Colimna, Nombre, tipoDato);
-    }
-    
+    }  
 }

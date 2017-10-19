@@ -12,6 +12,7 @@ import java.util.*;
  * @author Mario-Bx
  */
 public class Tabla {
+
     private int id_Tabla;
     private String Nombre;
     ArrayList<ForingKey> listaForingKey = new ArrayList<ForingKey>();
@@ -41,7 +42,7 @@ public class Tabla {
     public void setNombre(String Nombre) {
         this.Nombre = Nombre;
     }
-    
+
     public ArrayList<ForingKey> getListaForingKey() {
         return listaForingKey;
     }
@@ -68,10 +69,9 @@ public class Tabla {
 
     @Override
     public String toString() {
-        return "Tabla{" + "id_Tabla=" + id_Tabla + ", Nombre=" + Nombre 
-                + "\n         listaColumnas=" + listaColumnas 
+        return "Tabla{" + "id_Tabla=" + id_Tabla + ", Nombre=" + Nombre
+                + "\n         listaColumnas=" + listaColumnas
                 + "\n         listaKey=" + listaKey
                 + "\n         listaForingKey=" + listaForingKey + "}\n\n";
     }
-
 }
