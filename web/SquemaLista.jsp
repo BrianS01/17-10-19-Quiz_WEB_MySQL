@@ -1,7 +1,8 @@
 <%-- 
-    Document   : Squema
-    Created on : 16/10/2017, 01:59:08 PM
-    Author     : Mario-Bx
+ *  Quiz WEB MySQL
+ *      Author ::: Brian Sterling
+ *     Program ::: Bases de Datos
+ *  Credential ::: SIST0008-G01:SIV
 --%>
 
 <%@page import="Dato.Squema"%>

@@ -1,7 +1,8 @@
 <%-- 
-    Document   : Tabla
-    Created on : 16/10/2017, 02:59:18 PM
-    Author     : Mario-Bx
+ *  Quiz WEB MySQL
+ *      Author ::: Brian Sterling
+ *     Program ::: Bases de Datos
+ *  Credential ::: SIST0008-G01:SIV
 --%>
 <%@page import="Dato.Tabla"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

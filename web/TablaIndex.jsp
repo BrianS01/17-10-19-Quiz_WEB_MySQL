@@ -1,7 +1,8 @@
 <%-- 
-    Document   : TablaIndex
-    Created on : 18/10/2017, 02:52:21 AM
-    Author     : Juan Albarracin
+ *  Quiz WEB MySQL
+ *      Author ::: Brian Sterling
+ *     Program ::: Bases de Datos
+ *  Credential ::: SIST0008-G01:SIV
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

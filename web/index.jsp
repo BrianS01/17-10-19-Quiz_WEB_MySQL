@@ -1,9 +1,9 @@
 <%-- 
-    Document   : index
-    Created on : 16/10/2017, 01:46:09 PM
-    Author     : Mario-Bx
+ *  Quiz WEB MySQL
+ *      Author ::: Brian Sterling
+ *     Program ::: Bases de Datos
+ *  Credential ::: SIST0008-G01:SIV
 --%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,7 +14,6 @@
         <link rel="stylesheet" href="ui/Css/MenuDesplegableSub.css">
         <link rel="stylesheet" href="ui/Css/Etilo Fomulario.css">
     </head>
-    
     <body>
         <div id="Centrar">
             <div id="Telon" align="center">
@@ -32,8 +31,6 @@
                         </nav>
                     </header>                
                 </div>
-
-                
                 <div class="form-style-5">
                     <form>
                         <fieldset>
@@ -44,9 +41,7 @@
                         <input type="submit" value="ENTRAR" />
                     </form>
                 </div>
-
             </div>
         </div>
-
     </body>
 </html>
