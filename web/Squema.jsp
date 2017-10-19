@@ -6,7 +6,6 @@
 --%>
 <%@page import="Dato.Squema"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,7 +15,6 @@
         <link rel="stylesheet" href="ui/Css/MenuDesplegableSub.css">
         <link rel="stylesheet" href="ui/Css/Etilo Fomulario.css">
     </head>
-
     <body>
         <div id="Centrar">
             <div id="Telon" align="center">
@@ -40,11 +38,11 @@
                         </div>
                     </header>                
                 </div>
-
                 <div class="form-style-5">
                     <%
                         Squema newSquema = (Squema) request.getAttribute("frmAddSquema");
-                        if (request.getParameter("action").equals("insert")) {
+                        if (request.getParameter("action").equals("insert"))
+                        {
                     %>
                     <form method="POST" action='SquemaController' name="frmAddUser">
                         Squema ID : <input type="text" readonly="readonly" name="Squemaid"/>
@@ -54,7 +52,9 @@
                         <input type="submit" value="Insertar" />
                     </form>
                     <%
-                    } else if((request.getParameter("action").equals("edit"))){
+                        }
+                        else if((request.getParameter("action").equals("edit")))
+                        {
                     %>
                     <form method="POST" action='SquemaController'  name="frmAddSquema">
                         Squema ID : <input type="text"  name="Squemaid"/>
@@ -67,9 +67,7 @@
                         }
                     %>
                 </div>
-
             </div>
         </div>
-
     </body>
 </html>

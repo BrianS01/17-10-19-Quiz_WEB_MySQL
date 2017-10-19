@@ -6,7 +6,6 @@
 --%>
 <%@page import="Dato.Tabla"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,7 +15,6 @@
         <link rel="stylesheet" href="ui/Css/MenuDesplegableSub.css">
         <link rel="stylesheet" href="ui/Css/Etilo Fomulario.css">
     </head>
-
     <body>
         <div id="Centrar">
             <div id="Telon" align="center">
@@ -40,21 +38,23 @@
                         </div>
                     </header>                
                 </div>
-
                 <div class="form-style-5">
                     <%
                         Tabla newTabla = (Tabla) request.getAttribute("frmAddTabla");
-                        if (request.getParameter("action").equals("insert")) {
+                        if (request.getParameter("action").equals("insert"))
+                        {
                     %>
                     <form method="POST" action='TablaController' name="frmAddUser">
-                       Tabla ID : <input type="text" readonly="readonly" name="Tablaid"/>
+                        Tabla ID : <input type="text" readonly="readonly" name="Tablaid"/>
                         <br /> 
                         Nombre Tabla : <input type="text" name="Name"/>
                         <br />
                         <input type="submit" value="Insertar" />
                     </form>
                     <%
-                    } else if((request.getParameter("action").equals("edit"))){
+                        }
+                        else if((request.getParameter("action").equals("edit")))
+                        {
                     %>
                     <form method="POST" action='TablaController'  name="frmAddTabla">
                         Tabla ID : <input type="text"  name="Tablaid"/>
@@ -67,10 +67,7 @@
                         }
                     %>
                 </div>
-
             </div>
         </div>
-
     </body>
 </html>
-

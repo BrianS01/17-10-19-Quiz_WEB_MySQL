@@ -4,7 +4,6 @@
  *     Program ::: Bases de Datos
  *  Credential ::: SIST0008-G01:SIV
 --%>
-
 <%@page import="Dato.Squema"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -19,7 +18,6 @@
         <link rel="stylesheet" href="ui/Css/MenuDesplegableSub.css">
         <link rel="stylesheet" href="ui/Css/Etilo Fomulario.css">
     </head>
-
     <body>
         <div id="Centrar">
             <div id="Telon" align="center">
@@ -37,8 +35,6 @@
                         </nav>
                     </header>                
                 </div>
-
-
                 <div class="form-style-5">
                     <a href="SquemaController?action=insert"><input type="submit" value="Add Esquema"/></a>
                     <table border=1>
@@ -52,8 +48,10 @@
                         <tbody>
                             <%
                                 List<Squema> squemas = (List<Squema>) request.getAttribute("squemas");
-                                if (squemas != null) {
-                                    for (Squema squema : squemas) {
+                                if (squemas != null)
+                                {
+                                    for (Squema squema : squemas)
+                                    {
                             %>
                             <tr>
                                 <td><%=squema.getId_Squema()%></td>
@@ -61,22 +59,14 @@
                                 <td><a href="SquemaController?action=edit&Squemaid=<%=squema.getId_Squema() %>">Actualizar</a></td>
                                 <td><a href="SquemaController?action=delete&Squemaid=<%=squema.getId_Squema() %>">Eliminar</a></td>
                             </tr>
-
                             <%
                                     }
-
                                 }
-
                             %>
-
                         </tbody>
                     </table>
-                    
                 </div>
-
             </div>
         </div>
-
     </body>
 </html>
-

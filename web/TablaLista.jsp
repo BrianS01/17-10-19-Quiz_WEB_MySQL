@@ -4,7 +4,6 @@
  *     Program ::: Bases de Datos
  *  Credential ::: SIST0008-G01:SIV
 --%>
-
 <%@page import="Dato.Tabla"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -19,7 +18,6 @@
         <link rel="stylesheet" href="ui/Css/MenuDesplegableSub.css">
         <link rel="stylesheet" href="ui/Css/Etilo Fomulario.css">
     </head>
-
     <body>
         <div id="Centrar">
             <div id="Telon" align="center">
@@ -37,8 +35,6 @@
                         </nav>
                     </header>                
                 </div>
-
-
                 <div class="form-style-5">
                     <a href="TablaController?action=insert"><input type="submit" value="Add Tabla"/></a>
                     <table border=1>
@@ -52,8 +48,10 @@
                         <tbody>
                             <%
                                 List<Tabla> tablas = (List<Tabla>) request.getAttribute("tablas");
-                                if (tablas != null) {
-                                    for (Tabla tabla : tablas) {
+                                if (tablas != null)
+                                {
+                                    for (Tabla tabla : tablas)
+                                    {
                             %>
                             <tr>
                                 <td><%=tabla.getId_Tabla()%></td>
@@ -61,21 +59,16 @@
                                 <td><a href="TablaController?action=edit&Tablaid=<%=tabla.getId_Tabla()%>">Actualizar</a></td>
                                 <td><a href="TablaController?action=delete&Tablaid=<%=tabla.getId_Tabla()%>">Eliminar</a></td>
                             </tr>
-
                             <%
                                     }
 
                                 }
 
                             %>
-
                         </tbody>
                     </table>
-                    
                 </div>
-
             </div>
         </div>
-
     </body>
 </html>
