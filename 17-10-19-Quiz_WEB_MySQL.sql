@@ -48,12 +48,16 @@ create table EsqBaseD.`unidad`
 create table EsqBaseD.`contexto`
 (
 	`idContexto` int(11) NOT NULL AUTO_INCREMENT,
-    primary key(`id`)
+    `idUnidad` int(11) NOT NULL,
+    primary key(`id`),
+    foreign key(idUnidad) references unidad(idUnidad)
 );
 
 
 create table EsqBaseD.`modelo`
 (
 	`idModelo` int(11) NOT NULL AUTO_INCREMENT,
-    primary key(`id`)
+    `idUnidad` int(11) NOT NULL,
+    primary key(`id`),
+    foreign key(idUnidad) references unidad(idUnidad)
 );
