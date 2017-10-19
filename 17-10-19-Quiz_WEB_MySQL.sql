@@ -65,37 +65,20 @@ create table BasesQuizEsquema.`Modelo`
 
 
 insert into squemas(Squemaid, firstname) values(1, "primero");
-
-
 insert into Tabla(tablaid, esquemaid, firstname) values(1,1, "segundo");
+insert into Columnas(columnaid, tablaid1, firstname) values(1, 1, "tercero");
+
+
 
 
 insert into () values();
-CREATE TABLE BasesQuizEsquema.`Columnas`
-(
-	`columnaid` int(11) NOT NULL AUTO_INCREMENT,
-	`tablaid1` int(11) NOT null,
-	`firstname` varchar(45) DEFAULT NULL,
-	PRIMARY KEY (`columnaid`),
-    FOREIGN KEY (tablaid1) REFERENCES tabla(tablaid)
-);
-
-insert into () values();
-CREATE TABLE BasesQuizEsquema.`FOREIGN KEY`
-(
-	`forgeinid` int(11) NOT NULL AUTO_INCREMENT,
-    `firstname` varchar(45) DEFAULT NULL,
-    PRIMARY KEY (`forgeinid`)
-);
-
-
 create table BasesQuizEsquema.`Unidad`
 (
 	`idUnidad` int(11) NOT NULL AUTO_INCREMENT,
     primary key(`idUnidad`)
 );
 
-
+insert into () values();
 create table BasesQuizEsquema.`Contexto`
 (
 	`idContexto` int(11) NOT NULL AUTO_INCREMENT,
@@ -103,7 +86,7 @@ create table BasesQuizEsquema.`Contexto`
     primary key(`idContexto`),
     foreign key(idUnidad) references unidad(idUnidad)
 );
-
+insert into () values();
 
 create table BasesQuizEsquema.`Modelo`
 (
