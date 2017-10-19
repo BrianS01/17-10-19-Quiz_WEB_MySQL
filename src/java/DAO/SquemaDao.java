@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *  Quiz WEB MySQL
+ *      Author ::: Brian Sterling
+ *     Program ::: Bases de Datos
+ *  Credential ::: SIST0008-G01:SIV
  */
 package DAO;
 
@@ -15,10 +16,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Mario-Bx
- */
 public class SquemaDao
 {
     private Connection connection;
