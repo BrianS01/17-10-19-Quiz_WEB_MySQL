@@ -14,13 +14,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
 public class ContextoController extends HttpServlet
 {
     private static final long serialVersionUID = 1L;
     private static String INSERT_OR_EDIT = "/Squema.jsp";
     private static String LIST_USER = "/SquemaLista.jsp";
-    private SquemaDao dao;
+    private ContextoDao dao;
 
     public ContextoController()
     {
@@ -82,6 +81,7 @@ public class ContextoController extends HttpServlet
             int squemaId = Integer.parseInt(request.getParameter("Squemaid"));
             dao.updateSquema(squema, squemaId);
         }
+        
         RequestDispatcher view = request.getRequestDispatcher(LIST_USER);
         request.setAttribute("squemas", dao.getAllSquemas());
         view.forward(request, response);
