@@ -1,3 +1,9 @@
+/*
+ *  Quiz WEB MySQL
+ *      Author ::: Brian Sterling
+ *     Program ::: Bases de Datos
+ *  Credential ::: SIST0008-G01:SIV
+ */
 package Servicios;
 
 import java.io.FileNotFoundException;
@@ -8,8 +14,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
-public class DbUtil {
-
+public class DbUtil 
+{
     private static Connection connection = null;
 
     public static Connection getConnection() {
