@@ -16,11 +16,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ContextoDao
+public class ContextoDAO
 {
     private Connection connection;
 
-    public ContextoDao()
+    public ContextoDAO()
     {
         connection = DbUtil.getConnection();
     }

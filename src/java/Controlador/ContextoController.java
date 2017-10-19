@@ -5,7 +5,7 @@
  */
 package Controlador;
 
-import DAO.ContextoDao;
+import DAO.ContextoDAO;
 import Dato.Squema;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -19,12 +19,12 @@ public class ContextoController extends HttpServlet
     private static final long serialVersionUID = 1L;
     private static String INSERT_OR_EDIT = "/Squema.jsp";
     private static String LIST_USER = "/SquemaLista.jsp";
-    private ContextoDao dao;
+    private ContextoDAO dao;
 
     public ContextoController()
     {
         super();
-        dao = new ContextoDao();
+        dao = new ContextoDAO();
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
