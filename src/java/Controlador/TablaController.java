@@ -24,22 +24,23 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Mario-Bx
  */
-public class TablaController extends HttpServlet { 
+public class TablaController extends HttpServlet {
+
     private static final long serialVersionUID = 1L;
     private static String INSERT_OR_EDIT = "/Tabla.jsp";
     private static String LIST_USER = "/TablaLista.jsp";
     private TablaDao dao;
-    
+
     public TablaController() {
         super();
-        dao = new  TablaDao();
+        dao = new TablaDao();
     }
-    
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String forward="";
+        String forward = "";
         String action = request.getParameter("action");
 
-        if (action.equalsIgnoreCase("delete")){
+        if (action.equalsIgnoreCase("delete")) {
             System.out.println("Entro a la accion");
             int tablaId = Integer.parseInt(request.getParameter("Tablaid"));
             dao.deleteTabla(tablaId);
@@ -47,15 +48,15 @@ public class TablaController extends HttpServlet {
             ///primero va la tabla de sql
             request.setAttribute("tabla", dao.getAllTablas());
             System.out.println(" Realizo la accion de eliminar");
-        } else if (action.equalsIgnoreCase("edit")){
+        } else if (action.equalsIgnoreCase("edit")) {
             forward = INSERT_OR_EDIT;
             int tablaId = Integer.parseInt(request.getParameter("Tablaid"));
             Tabla tabla = dao.getTablaById(tablaId);
             ///primero va la tabla de sql
             request.setAttribute("Tabla", tabla);
-            
+
             System.out.println(" Realizo la accion de editar");
-        } else if (action.equalsIgnoreCase("TablaLista")){
+        } else if (action.equalsIgnoreCase("TablaLista")) {
             forward = LIST_USER;
             request.setAttribute("tabla", dao.getAllTablas());
         } else {
@@ -65,17 +66,16 @@ public class TablaController extends HttpServlet {
         RequestDispatcher view = request.getRequestDispatcher(forward);
         view.forward(request, response);
     }
-    
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Tabla tabla = new Tabla();
         tabla.setNombre(request.getParameter("Name"));
         String tablaid = request.getParameter("Tablaid");
-        
-        if(tablaid == null || tablaid.isEmpty()){
+
+        if (tablaid == null || tablaid.isEmpty()) {
             dao.addTabla(tabla);
-        }
-        else{
-           tabla.setId_Tabla(Integer.parseInt(tablaid));
+        } else {
+            tabla.setId_Tabla(Integer.parseInt(tablaid));
             int tablaId = Integer.parseInt(request.getParameter("Tablaid"));
             dao.updateTabla(tabla, tablaId);
         }
@@ -83,6 +83,6 @@ public class TablaController extends HttpServlet {
         request.setAttribute("tabla", dao.getAllTablas());
         view.forward(request, response);
     }
-    
+
 }
 
