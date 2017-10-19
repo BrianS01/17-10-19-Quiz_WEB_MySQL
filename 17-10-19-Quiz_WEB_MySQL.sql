@@ -10,7 +10,7 @@ CREATE TABLE BasesQuizEsquema.`Squemas`
 );
 
 
-CREATE TABLE BasesQuizEsquema.`tabla`
+CREATE TABLE BasesQuizEsquema.`Tabla`
 (
 	`tablaid` int(11) NOT NULL AUTO_INCREMENT,
 	`esquemaid` int(11) NOT null,
@@ -20,7 +20,7 @@ CREATE TABLE BasesQuizEsquema.`tabla`
 );
 
 
-CREATE TABLE BasesQuizEsquema.`columnas`
+CREATE TABLE BasesQuizEsquema.`Columnas`
 (
 	`columnaid` int(11) NOT NULL AUTO_INCREMENT,
 	`tablaid1` int(11) NOT null,
@@ -38,14 +38,14 @@ CREATE TABLE BasesQuizEsquema.`FOREIGN KEY`
 );
 
 
-create table BasesQuizEsquema.`unidad`
+create table BasesQuizEsquema.`Unidad`
 (
 	`idUnidad` int(11) NOT NULL AUTO_INCREMENT,
     primary key(`idUnidad`)
 );
 
 
-create table BasesQuizEsquema.`contexto`
+create table BasesQuizEsquema.`Contexto`
 (
 	`idContexto` int(11) NOT NULL AUTO_INCREMENT,
     `idUnidad` int(11) NOT NULL,
@@ -54,10 +54,18 @@ create table BasesQuizEsquema.`contexto`
 );
 
 
-create table BasesQuizEsquema.`modelo`
+create table BasesQuizEsquema.`Modelo`
 (
 	`idModelo` int(11) NOT NULL AUTO_INCREMENT,
     `idUnidad` int(11) NOT NULL,
     primary key(`idModelo`),
     foreign key(idUnidad) references unidad(idUnidad)
 );
+
+
+insert into squemas
+INSERT INTO Ciudad (
+Id_Ciudad,
+Nom_Ciudad
+)
+VALUES (1 ,"Cartagena"),
