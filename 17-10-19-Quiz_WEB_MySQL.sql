@@ -36,3 +36,24 @@ CREATE TABLE EsqBaseD.`FOREIGN KEY`
     `firstname` varchar(45) DEFAULT NULL,
     PRIMARY KEY (`forgeinid`)
 );
+
+
+create table EsqBaseD.`unidad`
+(
+	`idUnidad` int(11) NOT NULL AUTO_INCREMENT,
+    primary key(`id`)
+);
+
+
+create table EsqBaseD.`contexto`
+(
+	`idContexto` int(11) NOT NULL AUTO_INCREMENT,
+    primary key(`id`)
+);
+
+
+create table EsqBaseD.`modelo`
+(
+	`idModelo` int(11) NOT NULL AUTO_INCREMENT,
+    primary key(`id`)
+);
