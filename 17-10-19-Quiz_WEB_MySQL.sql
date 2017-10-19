@@ -68,5 +68,5 @@ insert into squemas(Squemaid, firstname) values(1, "primero");
 insert into Tabla(tablaid, esquemaid, firstname) values(2,1, "segundo");
 insert into Columnas(columnaid, tablaid1, firstname) values(3, 2, "tercero");
 insert into Unidad(idUnidad) values(4);
-insert into Contexto(idContexto, idUnidad) values(5, 4);
+insert into Contexto(idContexto, idUnidad, link) values(5, 4, "cuarto");
 insert into Modelo(idModelo, idUnidad) values(6, 4);
