@@ -41,7 +41,7 @@ CREATE TABLE BasesQuizEsquema.`FOREIGN KEY`
 create table BasesQuizEsquema.`unidad`
 (
 	`idUnidad` int(11) NOT NULL AUTO_INCREMENT,
-    primary key(`id`)
+    primary key(`idUnidad`)
 );
 
 
@@ -49,7 +49,7 @@ create table BasesQuizEsquema.`contexto`
 (
 	`idContexto` int(11) NOT NULL AUTO_INCREMENT,
     `idUnidad` int(11) NOT NULL,
-    primary key(`id`),
+    primary key(`idContexto`),
     foreign key(idUnidad) references unidad(idUnidad)
 );
 
@@ -58,6 +58,6 @@ create table BasesQuizEsquema.`modelo`
 (
 	`idModelo` int(11) NOT NULL AUTO_INCREMENT,
     `idUnidad` int(11) NOT NULL,
-    primary key(`id`),
+    primary key(`idModelo`),
     foreign key(idUnidad) references unidad(idUnidad)
 );
