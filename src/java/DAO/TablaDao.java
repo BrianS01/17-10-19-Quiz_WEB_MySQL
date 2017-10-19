@@ -19,91 +19,106 @@ import java.util.List;
 
 public class TablaDao
 {
-
     private Connection connection;
 
-    public TablaDao() {
+    public TablaDao()
+    {
         connection = DbUtil.getConnection();
     }
 
-    public void addTabla(Tabla tabla) {
-        try {
-            PreparedStatement preparedStatement = connection
-                    .prepareStatement("insert into tabla(firstname) values (?)");
+    public void addTabla(Tabla tabla)
+    {
+        try
+        {
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into tabla(firstname) values (?)");
             // Parameters start with 1
             preparedStatement.setString(1, tabla.getNombre());
             preparedStatement.executeUpdate();
-
-        } catch (SQLException e) {
+        }
+        catch (SQLException e)
+        {
             e.printStackTrace();
         }
     }
 
-    public void deleteTabla(int tablaId) {
-        try {
+    public void deleteTabla(int tablaId)
+    {
+        try
+        {
             System.out.println("Entro a eliminar");
-            PreparedStatement preparedStatement = connection
-                    .prepareStatement("delete from tabla where Tablaid=?");
+            PreparedStatement preparedStatement = connection.prepareStatement("delete from tabla where Tablaid=?");
             // Parameters start with 1
             preparedStatement.setInt(1, tablaId);
             preparedStatement.executeUpdate();
             System.out.println("Elimino tabla");
-        } catch (SQLException e) {
+        }
+        catch (SQLException e)
+        {
             e.printStackTrace();
         }
     }
 
-    public void updateTabla(Tabla tabla, int cs) {
-        try {
-            PreparedStatement preparedStatement = connection
-                    .prepareStatement("update tabla set firstname=?  where Tablaid=" + cs);
-
+    public void updateTabla(Tabla tabla, int cs)
+    {
+        try
+        {
+            PreparedStatement preparedStatement = connection.prepareStatement("update tabla set firstname=?  where Tablaid=" + cs);
             // Parameters start with 1
             preparedStatement.setString(1, tabla.getNombre());
             // preparedStatement.setInt(2, squema.getId_Squema());
             preparedStatement.executeUpdate();
-
-        } catch (SQLException e) {
+        }
+        catch (SQLException e)
+        {
             e.printStackTrace();
         }
     }
 
-    public List<Tabla> getAllTablas() {
+    public List<Tabla> getAllTablas()
+    {
         List<Tabla> tablaLista = new ArrayList<Tabla>();
-        try {
+        
+        try
+        {
             System.out.println("LLegue hasta aca");
             Statement statement = connection.createStatement();
-
             ResultSet rs = statement.executeQuery("select * from tabla");
-            while (rs.next()) {
+            
+            while (rs.next())
+            {
                 Tabla tabla = new Tabla();
                 tabla.setId_Tabla(rs.getInt("tablaid"));
                 tabla.setNombre(rs.getString("firstname"));
                 tablaLista.add(tabla);
             }
-        } catch (SQLException e) {
+        }
+        catch (SQLException e)
+        {
             e.printStackTrace();
         }
-
         return tablaLista;
     }
 
-    public Tabla getTablaById(int tablaId) {
+    public Tabla getTablaById(int tablaId)
+    {
         Tabla tabla = new Tabla();
-        try {
-            PreparedStatement preparedStatement = connection.
-                    prepareStatement("select * from squemas where Squemaid=?");
+        
+        try
+        {
+            PreparedStatement preparedStatement = connection.prepareStatement("select * from squemas where Squemaid=?");
             preparedStatement.setInt(1, tablaId);
             ResultSet rs = preparedStatement.executeQuery();
 
-            if (rs.next()) {
+            if (rs.next())
+            {
                 tabla.setId_Tabla(rs.getInt("tablaid"));
                 tabla.setNombre(rs.getString("firstname"));
             }
-        } catch (SQLException e) {
+        }
+        catch (SQLException e)
+        {
             e.printStackTrace();
         }
-
         return tabla;
     }
 }

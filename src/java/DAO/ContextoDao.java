@@ -94,7 +94,6 @@ public class ContextoDAO
         {
             e.printStackTrace();
         }
-
         return squemaLista;
     }
     
@@ -117,7 +116,6 @@ public class ContextoDAO
         {
             e.printStackTrace();
         }
-
         return squema;
     }
 }

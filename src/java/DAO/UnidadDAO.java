@@ -95,7 +95,6 @@ public class UnidadDAO
         {
             e.printStackTrace();
         }
-
         return squemaLista;
     }
     
@@ -118,7 +117,6 @@ public class UnidadDAO
         {
             e.printStackTrace();
         }
-
         return squema;
     }
 }

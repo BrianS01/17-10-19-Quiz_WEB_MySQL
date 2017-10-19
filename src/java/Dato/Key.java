@@ -9,8 +9,7 @@ package Dato;
 public class Key extends Columna
 {
     public Key()
-    {
-    }
+    {}
 
     public Key(int id_Colimna, String Nombre, String tipoDato)
     {

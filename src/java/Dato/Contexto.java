@@ -15,8 +15,7 @@ public class Contexto
     ArrayList<Tabla> listaTablas = new ArrayList<Tabla>();
 
     public Contexto()
-    {
-    }
+    {}
 
     public Contexto(int idContexto, String link)
     {

@@ -14,8 +14,7 @@ public class Unidad
     ArrayList<Tabla> listaTablas = new ArrayList<Tabla>();
 
     public Unidad()
-    {
-    }
+    {}
 
     public Unidad(int idContexto)
     {

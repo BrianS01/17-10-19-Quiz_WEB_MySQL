@@ -18,11 +18,16 @@ public class DbUtil
 {
     private static Connection connection = null;
 
-    public static Connection getConnection() {
-        if (connection != null) {
+    public static Connection getConnection()
+    {
+        if (connection != null)
+        {
             return connection;
-        } else {
-            try {
+        }
+        else
+        {
+            try
+            {
                 Properties prop = new Properties();
                 InputStream inputStream = DbUtil.class.getClassLoader().getResourceAsStream("/db.properties");
                 prop.load(inputStream);
@@ -32,13 +37,21 @@ public class DbUtil
                 String password = prop.getProperty("password");
                 Class.forName(driver);
                 connection = DriverManager.getConnection(url, user, password);
-            } catch (ClassNotFoundException e) {
+            }
+            catch (ClassNotFoundException e)
+            {
                 e.printStackTrace();
-            } catch (SQLException e) {
+            }
+            catch (SQLException e)
+            {
                 e.printStackTrace();
-            } catch (FileNotFoundException e) {
+            }
+            catch (FileNotFoundException e)
+            {
                 e.printStackTrace();
-            } catch (IOException e) {
+            }
+            catch (IOException e)
+            {
                 e.printStackTrace();
             }
             return connection;

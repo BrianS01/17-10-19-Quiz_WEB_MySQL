@@ -94,7 +94,6 @@ public class SquemaDao
         {
             e.printStackTrace();
         }
-
         return squemaLista;
     }
     
@@ -117,7 +116,6 @@ public class SquemaDao
         {
             e.printStackTrace();
         }
-
         return squema;
     }
 }

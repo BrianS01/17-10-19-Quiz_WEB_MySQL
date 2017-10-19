@@ -86,6 +86,7 @@ public class SquemaController extends HttpServlet
             int squemaId = Integer.parseInt(request.getParameter("Squemaid"));
             dao.updateSquema(squema, squemaId);
         }
+        
         RequestDispatcher view = request.getRequestDispatcher(LIST_USER);
         request.setAttribute("squemas", dao.getAllSquemas());
         view.forward(request, response);
